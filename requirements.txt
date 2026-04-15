@@ -1,0 +1,22 @@
+# Dependencies for assemble_locobot_mesh.py
+# Install with:  pip install -r requirements.txt
+
+# Core mesh processing and PLY export
+trimesh>=4.0.0
+
+# Numerical computing (also a trimesh dependency)
+numpy>=1.24.0
+
+# Used by trimesh for spatial operations
+scipy>=1.10.0
+
+# Collada (.dae) loader — needed for the Kobuki base and wheel meshes.
+# Without this, Kobuki body/wheels are skipped with a warning.
+# Install the collada extras bundle:
+#   pip install trimesh[easy]
+# or just the collada backend directly:
+pycollada>=0.8
+
+# Image loading — used to sample interbotix_black.png for vertex colours.
+# Also required by trimesh to resolve texture maps in DAE files.
+Pillow>=9.0
